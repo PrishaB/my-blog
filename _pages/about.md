@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+![]({{site.baseurl}}/images/image0.jpg "https://github.com/fastai/fastpages")
 
 
 
