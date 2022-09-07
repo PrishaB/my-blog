@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      5 min read
     
 </span></p>
 
@@ -198,9 +198,66 @@ window.onload = wrap_img;
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1 - Say Hello&quot;</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;2 - Output colors&quot;</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;3 - Loading in color&quot;</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;4 - History Quiz&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;4 - History Flashcards (Prisha Boreddy)&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;5 - GPA Calculator (Prisha Boreddy)&quot;</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;0 - Quit&quot;</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;-------------------------\n&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">calculator</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">Scanner</span> <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>   
+            
+        <span class="n">String</span> <span class="n">letterGrades</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">weight</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">sum</span> <span class="o">=</span> <span class="mf">0.00</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">classes</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;This is a simple GPA calculator. After being asked to put in the number of classes you are taking, please respond to the following prompts with a capital letter.&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Number of classes you are taking this trimester: \n&quot;</span><span class="p">);</span>
+        
+        <span class="n">classes</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+    
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">classes</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        
+            <span class="n">Scanner</span> <span class="n">input2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;What is your Grade in Period &quot;</span> <span class="o">+</span> <span class="n">num</span> <span class="o">+</span> <span class="s">&quot;? ---&gt; &quot;</span><span class="p">);</span>
+            <span class="n">letterGrades</span> <span class="o">=</span> <span class="n">input2</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">letterGrades</span> <span class="o">+</span> <span class="s">&quot;\n&quot;</span><span class="p">);</span>
+            
+    
+            <span class="k">if</span> <span class="p">(</span><span class="n">letterGrades</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">)){</span>
+            <span class="n">weight</span> <span class="o">=</span> <span class="mf">4.00</span><span class="p">;</span> 
+            <span class="n">sum</span> <span class="o">+=</span> <span class="n">weight</span><span class="p">;</span>
+    
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">letterGrades</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">)){</span>
+            <span class="n">weight</span> <span class="o">=</span> <span class="mf">3.00</span><span class="p">;</span>
+            <span class="n">sum</span> <span class="o">+=</span> <span class="n">weight</span><span class="p">;</span>
+    
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">letterGrades</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">)){</span>
+            <span class="n">weight</span> <span class="o">=</span> <span class="mf">2.00</span><span class="p">;</span>
+            <span class="n">sum</span> <span class="o">+=</span> <span class="n">weight</span><span class="p">;</span>
+    
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">letterGrades</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;D&quot;</span><span class="p">)){</span>
+            <span class="n">weight</span> <span class="o">=</span> <span class="mf">1.00</span><span class="p">;</span>
+            <span class="n">sum</span> <span class="o">+=</span> <span class="n">weight</span><span class="p">;</span>
+    
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">letterGrades</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;F&quot;</span><span class="p">)){</span>
+            <span class="n">weight</span> <span class="o">=</span> <span class="mf">0.00</span><span class="p">;</span>
+            <span class="n">sum</span> <span class="o">+=</span> <span class="n">weight</span><span class="p">;</span>
+        
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Improper syntax&quot;</span><span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span>
+         
+        <span class="p">}</span>
+
+        <span class="n">num</span> <span class="o">=</span> <span class="n">num</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    
+        <span class="p">}</span>
+    
+        <span class="kt">double</span> <span class="n">GPA</span> <span class="o">=</span> <span class="n">sum</span> <span class="o">/</span> <span class="n">classes</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Your Un-weighted GPA is:&quot;</span> <span class="o">+</span> <span class="n">GPA</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="c1">// Private method to perform action and return true if action is to quit/exit</span>
@@ -240,7 +297,10 @@ window.onload = wrap_img;
                 <span class="c1">// {   //print keys and values</span>
                 <span class="c1">//     System.out.println(entry.getKey() + &quot; : &quot; +entry.getValue());</span>
                 <span class="c1">// }</span>
-                <span class="k">break</span><span class="p">;</span>      
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">5</span><span class="p">:</span>
+                <span class="n">calculator</span><span class="p">();</span>
+                <span class="k">break</span><span class="p">;</span>
             <span class="k">default</span><span class="p">:</span>
                 <span class="c1">//Prints error message from console</span>
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Unexpected choice, try again.&quot;</span><span class="p">);</span>
@@ -277,11 +337,19 @@ Choose from these choices
 1 - Say Hello
 2 - Output colors
 3 - Loading in color
-4 - History Quiz
+4 - History Flashcards (Prisha Boreddy)
+5 - GPA Calculator (Prisha Boreddy)
 0 - Quit
 -------------------------
 
 4: What year was the DOI signed?What saved the capitol during the War of 1812?Who was the 2nd President of the US?Who was mainly involved in the corrupt bargain?1776ThunderstormJohn AdamsJohn Qunicy Adams
+5: This is a simple GPA calculator. After being asked to put in the number of classes you are taking, please respond to the following prompts with a capital letter.Number of classes you are taking this trimester: 
+What is your Grade in Period 1? ---&gt; A
+What is your Grade in Period 2? ---&gt; A
+What is your Grade in Period 3? ---&gt; A
+What is your Grade in Period 4? ---&gt; A
+Your Un-weighted GPA is:4.0
+
 0: Goodbye, World!
 </pre>
 </div>
