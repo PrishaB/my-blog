@@ -91,9 +91,20 @@
 
   
   
+      ,"page0": {
+          "title": "Calculator Starters",
+          "content": "| Menu | Calculator | Snake Game | . 0 1 2 3 + 4 5 6 - 7 8 9 * A/C 0 . =",
+          "url": "https://prishab.github.io/my-blog/frontend12/calculator",
+          "relUrl": "/frontend12/calculator",
+          "date": ""
+      }
+      
+  
 
   
-      ,"page1": {
+
+  
+      ,"page2": {
           "title": "About Me",
           "content": ". Hello, my name is Prisha, welcome to my blog! I’m a senior at DNHS and the time I wrote this message is extremely late so I’m just leaving it at that. Thanks for stopping by! .",
           "url": "https://prishab.github.io/my-blog/about/",
@@ -125,7 +136,7 @@
   
 
   
-      ,"page10": {
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://prishab.github.io/my-blog/robots.txt",
