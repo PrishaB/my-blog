@@ -4,9 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>About Me | PrishBlog</title>
+<title>About | PrishBlog</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="About Me" />
+<meta property="og:title" content="About" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
 <meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
@@ -15,9 +15,9 @@
 <meta property="og:site_name" content="PrishBlog" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="About Me" />
+<meta property="twitter:title" content="About" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"About Me","name":"PrishBlog","url":"https://prishab.github.io/my-blog/about/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"About","name":"PrishBlog","url":"https://prishab.github.io/my-blog/about/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/my-blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://prishab.github.io/my-blog/feed.xml" title="PrishBlog" /><link rel="shortcut icon" type="image/x-icon" href="/my-blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -64,7 +64,7 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/my-blog/frontend12/calculator">Calculator Starters</a><a class="page-link" href="/my-blog/about/">About Me</a><a class="page-link" href="/my-blog/search/">Search</a><a class="page-link" href="/my-blog/categories/">Tags</a></div>
+        <div class="trigger"><a class="page-link" href="/my-blog/frontend12/calculator">Calculator Starters</a><a class="page-link" href="/my-blog/about/">About</a><a class="page-link" href="/my-blog/search/">Search</a><a class="page-link" href="/my-blog/categories/">Tags</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -72,13 +72,101 @@ window.onload = wrap_img;
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">About Me</h1>
+    <h1 class="post-title">About</h1>
   </header>
 
   <div class="post-content">
-    <p><img src="/my-blog/images/image0.jpg" alt="" title="https://github.com/PrishaB/my-blog/blob/master/images/image0.jpg" /> <img align="left" /></p>
+    <p>This site is built with <a href="https://github.com/fastai/fastpages">fastpages</a></p>
 
-<p>Hello, my name is Prisha, welcome to my blog! I’m a senior at DNHS and the time I wrote this message is extremely late so I’m just leaving it at that. Thanks for stopping by!</p>
+<h2 id="key-links">Key Links</h2>
+<ul>
+  <li>GitHub Repos:  <a href="https://github.com/nighthawkcoders">github.com/nighthawkcoders</a>, <a href="https://github.com/nighthawkcoders/spring_portfolio/generate">Spring Portfolio Template</a></li>
+  <li>AWS Deployments: <a href="https://csa.nighthawkcodingsociety.com/">csa.nighthawkcodingsociety.com</a></li>
+  <li>Slack: <a href="https://join.slack.com/t/cs-a-hq/shared_invite/zt-uasn6lmf-_ij463qEW71hsvI2S9nDsg">Join Link</a></li>
+  <li>2021-2022 Archives: <a href="https://padlet.com/jmortensen7/csa2022tri1">Fall</a>, <a href="https://padlet.com/jmortensen7/csa2022tri2">Early Winter</a>, <a href="https://csacoders.nighthawkcodingsociety.com/">Late Winter, Spring</a>
+<img src="/my-blog/images/qr_code.png" alt="QR Code" /></li>
+</ul>
+
+<h2 id="students">Students</h2>
+<!-- HTML table fragment for page -->
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>ID</th>
+    <th>Age</th>
+  </tr>
+  </thead>
+  <tbody id="result">
+    <!-- javascript generated data -->
+  </tbody>
+</table>
+
+<!-- Script is layed out in a sequence (no function) and will execute when page is loaded -->
+<script>
+  // prepare HTML result container for new output
+  const resultContainer = document.getElementById("result");
+
+  // prepare fetch options
+  const url = "https://csa.nighthawkcodingsociety.com/api/person/all";
+  const options = {
+    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'omit', // include, *same-origin, omit
+    headers: {
+      'Content-Type': 'application/json'
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+  };
+
+  // fetch the API
+  fetch(url, options)
+    // response is a RESTful "promise" on any successful fetch
+    .then(response => {
+      // check for response errors
+      if (response.status !== 200) {
+          const errorMsg = 'Database response error: ' + response.status;
+          console.log(errorMsg);
+          const tr = document.createElement("tr");
+          const td = document.createElement("td");
+          td.innerHTML = errorMsg;
+          tr.appendChild(td);
+          resultContainer.appendChild(tr);
+          return;
+      }
+      // valid response will have json data
+      response.json().then(data => {
+          console.log(data);
+          for (const row of data) {
+            // tr and td build out for each row
+            const tr = document.createElement("tr");
+            const name = document.createElement("td");
+            const id = document.createElement("td");
+            const age = document.createElement("td");
+            // data is specific to the API
+            name.innerHTML = row.name; 
+            id.innerHTML = row.email; 
+            age.innerHTML = row.age; 
+            // this build td's into tr
+            tr.appendChild(name);
+            tr.appendChild(id);
+            tr.appendChild(age);
+            // add HTML to container
+            resultContainer.appendChild(tr);
+          }
+      })
+  })
+  // catch fetch errors (ie ACCESS to server blocked)
+  .catch(err => {
+    console.error(err);
+    const tr = document.createElement("tr");
+    const td = document.createElement("td");
+    td.innerHTML = err;
+    tr.appendChild(td);
+    resultContainer.appendChild(tr);
+  });
+</script>
 
 
   </div>
