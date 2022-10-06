@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Title | PrishBlog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Title" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://prishab.github.io/my-blog/2022/10/05/api.html" />
+<meta property="og:url" content="https://prishab.github.io/my-blog/2022/10/05/api.html" />
+<meta property="og:site_name" content="PrishBlog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-10-05T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Title" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-10-05T00:00:00-05:00","datePublished":"2022-10-05T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Title","mainEntityOfPage":{"@type":"WebPage","@id":"https://prishab.github.io/my-blog/2022/10/05/api.html"},"url":"https://prishab.github.io/my-blog/2022/10/05/api.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/my-blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://prishab.github.io/my-blog/feed.xml" title="PrishBlog" /><link rel="shortcut icon" type="image/x-icon" href="/my-blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/my-blog/">PrishBlog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/my-blog/frontend12/calculator">Calculator Starters</a><a class="page-link" href="/my-blog/about/">About</a><a class="page-link" href="/my-blog/search/">Search</a><a class="page-link" href="/my-blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-10-05T00:00:00-05:00" itemprop="datePublished">
+        Oct 5, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/PrishaB/my-blog/tree/master/_notebooks/2022-10-05-api.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/my-blog/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/PrishaB/my-blog/master?filepath=_notebooks%2F2022-10-05-api.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/my-blog/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/PrishaB/my-blog/blob/master/_notebooks/2022-10-05-api.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/my-blog/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FPrishaB%2Fmy-blog%2Fblob%2Fmaster%2F_notebooks%2F2022-10-05-api.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/my-blog/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-10-05-api.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.net.URI</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.net.http.HttpClient</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.net.http.HttpRequest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.net.http.HttpResponse</span><span class="p">;</span>
+
+<span class="n">HttpRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="n">HttpRequest</span><span class="p">.</span><span class="na">newBuilder</span><span class="p">()</span>
+		<span class="p">.</span><span class="na">uri</span><span class="p">(</span><span class="n">URI</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="s">&quot;https://mental-health-info-api.p.rapidapi.com/news/thetimes&quot;</span><span class="p">))</span>
+		<span class="p">.</span><span class="na">header</span><span class="p">(</span><span class="s">&quot;X-RapidAPI-Key&quot;</span><span class="p">,</span> <span class="s">&quot;a8ea413753msh15f71679011b0bbp19bf3ejsn899c6392170a&quot;</span><span class="p">)</span>
+		<span class="p">.</span><span class="na">header</span><span class="p">(</span><span class="s">&quot;X-RapidAPI-Host&quot;</span><span class="p">,</span> <span class="s">&quot;mental-health-info-api.p.rapidapi.com&quot;</span><span class="p">)</span>
+		<span class="p">.</span><span class="na">method</span><span class="p">(</span><span class="s">&quot;GET&quot;</span><span class="p">,</span> <span class="n">HttpRequest</span><span class="p">.</span><span class="na">BodyPublishers</span><span class="p">.</span><span class="na">noBody</span><span class="p">())</span>
+		<span class="p">.</span><span class="na">build</span><span class="p">();</span>
+<span class="n">HttpResponse</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="n">HttpClient</span><span class="p">.</span><span class="na">newHttpClient</span><span class="p">().</span><span class="na">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">HttpResponse</span><span class="p">.</span><span class="na">BodyHandlers</span><span class="p">.</span><span class="na">ofString</span><span class="p">());</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="na">body</span><span class="p">());</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[{&#34;title&#34;:&#34;UK NEWSFormer soldier’s coastal run raises £400,000 for mental health charityAfter surviving two bomb blasts in Iraq and Afghanistan, Paul Minter could be forgiven for wanting a quiet life. ...Tuesday October 04 2022, 5.00pm, The TimesKieran Gair&#34;,&#34;url&#34;:&#34;https://www.thetimes.co.uk/article/former-soldiers-coastal-run-raises-400-000-for-mental-health-charity-rx6r5p22r&#34;,&#34;source&#34;:&#34;thetimes&#34;},{&#34;title&#34;:&#34;GILLIAN BOWDITCHSuicidal children are being failed. The system is brokenA quarter of children referred for specialist help with mental health problems have either tried or thought about...Sunday September 04 2022, 12.01am, The Sunday TimesGillian Bowditch&#34;,&#34;url&#34;:&#34;https://www.thetimes.co.uk/article/suicidal-children-failed-broken-system-scotland-comment-xgtdp0h2b&#34;,&#34;source&#34;:&#34;thetimes&#34;},{&#34;title&#34;:&#34;HEALTHParents go private to get children mental health helpParents are increasingly turning to private health services for support with their children’s mental health...Monday August 08 2022, 12.01am, The TimesKat Lay, Health Editor&#34;,&#34;url&#34;:&#34;https://www.thetimes.co.uk/article/parents-go-private-to-get-children-mental-health-help-72fn9w53n&#34;,&#34;source&#34;:&#34;thetimes&#34;},{&#34;title&#34;:&#34;HEALTHChild mental health crisis ‘holds nation back’The mental health emergency among children is so profound that it threatens the country’s future prosperity, a...Saturday July 30 2022, 12.01am, The TimesJames Beal, Social Affairs Editor&#34;,&#34;url&#34;:&#34;https://www.thetimes.co.uk/article/child-mental-health-crisis-is-holding-england-back-5s8qpzclj&#34;,&#34;source&#34;:&#34;thetimes&#34;},{&#34;title&#34;:&#34;Children attempt suicide as they wait for NHS helpThousands of children and young adults have attempted suicide as a result of long waits for NHS mental health care...Thursday July 21 2022, 12.01am, The TimesKat Lay, Health Editor&#34;,&#34;url&#34;:&#34;https://www.thetimes.co.uk/article/children-attempt-suicide-as-they-wait-for-nhs-help-bgnhslbzc&#34;,&#34;source&#34;:&#34;thetimes&#34;},{&#34;title&#34;:&#34;Video IconHEALTHCost of living risks ‘pandemic-style mental health crisis’The cost of living crisis poses a pandemic-level threat to the nation’s mental wellbeing, one of Britain’s most...Monday June 20 2022, 2.45pm, The TimesKat Lay, Health Editor&#34;,&#34;url&#34;:&#34;https://www.thetimes.co.uk/article/cost-of-living-risks-pandemic-style-mental-health-crisis-lwwcxzlvb&#34;,&#34;source&#34;:&#34;thetimes&#34;},{&#34;title&#34;:&#34;HEALTHMental illness among young at record highA record number of children and young people are being treated for mental health problems. More than 420,000 were...Monday May 23 2022, 12.01am, The TimesCharlie Moloney&#34;,&#34;url&#34;:&#34;https://www.thetimes.co.uk/article/mental-illness-in-children-and-young-people-at-record-high-pz7qn3r2b&#34;,&#34;source&#34;:&#34;thetimes&#34;},{&#34;title&#34;:&#34;UK NEWSBecker ‘mentally strong and doing OK’ in jailBoris Becker is doing “OK” in prison and his mental health is good, but life inside Wandsworth jail is “not a...Wednesday May 04 2022, 9.30am, The TimesKieran Gair&#34;,&#34;url&#34;:&#34;https://www.thetimes.co.uk/article/boris-becker-mentally-strong-and-doing-ok-in-jail-says-wife-s68p2l386&#34;,&#34;source&#34;:&#34;thetimes&#34;}]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/my-blog/2022/10/05/api.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/my-blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/my-blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/my-blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/my-blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/my-blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
