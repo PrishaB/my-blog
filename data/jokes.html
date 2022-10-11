@@ -93,22 +93,16 @@ window.onload = wrap_img;
   const resultContainer = document.getElementById("result");
 
   // keys for joke reactions
-  const HAHA = "haha";
-  const BOOHOO = "boohoo";
-HttpRequest request = HttpRequest.newBuilder()
-		.uri(URI.create("https://mental-health-info-api.p.rapidapi.com/news/thetimes"))
-		.header("X-RapidAPI-Key", "a8ea413753msh15f71679011b0bbp19bf3ejsn899c6392170a")
-		.header("X-RapidAPI-Host", "mental-health-info-api.p.rapidapi.com")
-		.method("GET", HttpRequest.BodyPublishers.noBody())
-		.build();
+  const HELPFUL = "helpful";
+  const UNHELPFUL = "unhelpful";
+
   // prepare fetch urls
-  // const url = "https://mental-health-info-api.p.rapidapi.com/news/thetimes";
-  const url = "https://mental-health-info-api.p.rapidapi.com/news/thetimes";
+  // const url = "https://flask.nighthawkcodingsociety.com/api/jokes";
+  const url = "https://spring.nighthawkcodingsociety.com/api/jokes";
   const get_url = url +"/";
-  const like_url = url + "/like/";  // haha reaction
-  const jeer_url = url + "/jeer/";  // boohoo reaction
-HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
-System.out.println(response.body());
+  const like_url = url + "/like/";  // buy reaction
+  const jeer_url = url + "/jeer/";  // skip reaction
+
   // prepare fetch GET options
   const options = {
     method: 'GET', // *GET, POST, PUT, DELETE, etc.
@@ -140,35 +134,35 @@ System.out.println(response.body());
             const tr = document.createElement("tr");
 
             // td for joke cell
-            const joke = document.createElement("td");
-              joke.innerHTML = row.id + ". " + row.joke;  // add fetched data to innerHTML
+            const item = document.createElement("td");
+              item.innerHTML = row.id + ". " + row.item;  // add fetched data to innerHTML
 
-            // td for haha cell with onclick actions
-            const haha = document.createElement("td");
-              const haha_but = document.createElement('button');
-              haha_but.id = HAHA+row.id   // establishes a HAHA JS id for cell
-              haha_but.innerHTML = row.haha;  // add fetched "haha count" to innerHTML
-              haha_but.onclick = function () {
+            // td for buy cell with onclick actions
+            const helpful = document.createElement("td");
+              const helpful_but = document.createElement('button');
+              helpful_but.id = helpful+row.id   // establishes a buy JS id for cell
+              helpful_but.innerHTML = row.helpful;  // add fetched "buy count" to innerHTML
+              helpful_but.onclick = function () {
                 // onclick function call with "like parameters"
-                reaction(HAHA, like_url+row.id, haha_but.id);  
+                reaction(helpful, like_url+row.id, helpful_but.id);  
               };
-              haha.appendChild(haha_but);  // add "haha button" to haha cell
+              helpful.appendChild(helpful_but);  // add "buy button" to buy cell
 
-            // td for boohoo cell with onclick actions
-            const boohoo = document.createElement("td");
-              const boohoo_but = document.createElement('button');
-              boohoo_but.id = BOOHOO+row.id  // establishes a BOOHOO JS id for cell
-              boohoo_but.innerHTML = row.boohoo;  // add fetched "boohoo count" to innerHTML
-              boohoo_but.onclick = function () {
+            // td for skip cell with onclick actions
+            const unhelpful = document.createElement("td");
+              const unhelpful_but = document.createElement('button');
+              unhelpful_but.id = unhelpful+row.id  // establishes a skip JS id for cell
+              unhelpful_but.innerHTML = row.unhelpful;  // add fetched "skip count" to innerHTML
+              unhelpful_but.onclick = function () {
                 // onclick function call with "jeer parameters"
-                reaction(BOOHOO, jeer_url+row.id, boohoo_but.id);  
+                reaction(unhelpful, jeer_url+row.id, skip_but.id);  
               };
-              boohoo.appendChild(boohoo_but);  // add "boohoo button" to boohoo cell
+              unhelpful.appendChild(unhelpful_but);  // add "skip button" to skip cell
 
             // this builds ALL td's (cells) into tr (row) element
-            tr.appendChild(joke);
-            tr.appendChild(haha);
-            tr.appendChild(boohoo);
+            tr.appendChild(item);
+            tr.appendChild(helpful);
+            tr.appendChild(unhelpful);
 
             // this adds all the tr (row) work above to the HTML "result" container
             resultContainer.appendChild(tr);
@@ -196,10 +190,10 @@ System.out.println(response.body());
       response.json().then(data => {
           console.log(data);
           // Likes or Jeers updated/incremented
-          if (type === HAHA) // like data element
-            document.getElementById(elemID).innerHTML = data.haha;  // fetched haha data assigned to haha Document Object Model (DOM)
-          else if (type === BOOHOO) // jeer data element
-            document.getElementById(elemID).innerHTML = data.boohoo;  // fetched boohoo data assigned to boohoo Document Object Model (DOM)
+          if (type === helpful) // like data element
+            document.getElementById(elemID).innerHTML = data.helpful;  // fetched buy data assigned to buy Document Object Model (DOM)
+          else if (type === unhelpful) // jeer data element
+            document.getElementById(elemID).innerHTML = data.unhelpful;  // fetched skip data assigned to skip Document Object Model (DOM)
           else
             error("unknown type: " + type);  // should never occur
       })
