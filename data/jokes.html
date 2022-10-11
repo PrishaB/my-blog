@@ -95,14 +95,20 @@ window.onload = wrap_img;
   // keys for joke reactions
   const HAHA = "haha";
   const BOOHOO = "boohoo";
-
+HttpRequest request = HttpRequest.newBuilder()
+		.uri(URI.create("https://mental-health-info-api.p.rapidapi.com/news/thetimes"))
+		.header("X-RapidAPI-Key", "a8ea413753msh15f71679011b0bbp19bf3ejsn899c6392170a")
+		.header("X-RapidAPI-Host", "mental-health-info-api.p.rapidapi.com")
+		.method("GET", HttpRequest.BodyPublishers.noBody())
+		.build();
   // prepare fetch urls
-  // const url = "https://flask.nighthawkcodingsociety.com/api/jokes";
-  const url = "https://spring.nighthawkcodingsociety.com/api/jokes";
+  // const url = "https://mental-health-info-api.p.rapidapi.com/news/thetimes";
+  const url = "https://mental-health-info-api.p.rapidapi.com/news/thetimes";
   const get_url = url +"/";
   const like_url = url + "/like/";  // haha reaction
   const jeer_url = url + "/jeer/";  // boohoo reaction
-
+HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
+System.out.println(response.body());
   // prepare fetch GET options
   const options = {
     method: 'GET', // *GET, POST, PUT, DELETE, etc.
