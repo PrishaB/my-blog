@@ -13,10 +13,10 @@
   
     
         ,"post1": {
-            "title": "Jokes",
-            "content": "title: Fetch of Backend Jokes layout: default description: An introductory example of Frontend talking to Backend Java application serving jokes. permalink: /data/jokes image: /images/jokes.png categories: [1.C] tags: [javascript] — . Joke HaHa Boohoo .",
-            "url": "https://prishab.github.io/my-blog/2022/10/07/jokes.html",
-            "relUrl": "/2022/10/07/jokes.html",
+            "title": "Fetch of Backend Jokes",
+            "content": "Joke HaHa Boohoo .",
+            "url": "https://prishab.github.io/my-blog/data/jokes",
+            "relUrl": "/data/jokes",
             "date": " • Oct 7, 2022"
         }
         
