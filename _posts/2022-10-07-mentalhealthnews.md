@@ -22,17 +22,8 @@ tags: [javascript]
   </tbody>
 </table>
 
-
 <!-- Script is layed out in a sequence (without a function) and will execute when page is loaded -->
 <script>
-// HttpRequest request = HttpRequest.newBuilder()
-// 		.uri(URI.create("https://mental-health-info-api.p.rapidapi.com/news/thetimes"))
-// 		.header("X-RapidAPI-Key", "a8ea413753msh15f71679011b0bbp19bf3ejsn899c6392170a")
-// 		.header("X-RapidAPI-Host", "mental-health-info-api.p.rapidapi.com")
-// 		.method("GET", HttpRequest.BodyPublishers.noBody())
-// 		.build();
-// HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
-// System.out.println(response.body());
 
   // prepare HTML defined "result" container for new output
   const resultContainer = document.getElementById("result");
@@ -43,7 +34,7 @@ tags: [javascript]
 
   // prepare fetch urls
   // const url = "https://flask.nighthawkcodingsociety.com/api/jokes";
-  const url = "https://mental-health-info-api.p.rapidapi.com/news/thetimes";
+  const url = "https://spring.nighthawkcodingsociety.com/api/jokes";
   const get_url = url +"/";
   const like_url = url + "/like/";  // haha reaction
   const jeer_url = url + "/jeer/";  // boohoo reaction
