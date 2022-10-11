@@ -88,14 +88,14 @@ window.onload = wrap_img;
 
 <!-- Script is layed out in a sequence (without a function) and will execute when page is loaded -->
 <script>
-HttpRequest request = HttpRequest.newBuilder()
-		.uri(URI.create("https://mental-health-info-api.p.rapidapi.com/news/thetimes"))
-		.header("X-RapidAPI-Key", "a8ea413753msh15f71679011b0bbp19bf3ejsn899c6392170a")
-		.header("X-RapidAPI-Host", "mental-health-info-api.p.rapidapi.com")
-		.method("GET", HttpRequest.BodyPublishers.noBody())
-		.build();
-HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
-System.out.println(response.body());
+// HttpRequest request = HttpRequest.newBuilder()
+// 		.uri(URI.create("https://mental-health-info-api.p.rapidapi.com/news/thetimes"))
+// 		.header("X-RapidAPI-Key", "a8ea413753msh15f71679011b0bbp19bf3ejsn899c6392170a")
+// 		.header("X-RapidAPI-Host", "mental-health-info-api.p.rapidapi.com")
+// 		.method("GET", HttpRequest.BodyPublishers.noBody())
+// 		.build();
+// HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
+// System.out.println(response.body());
 
   // prepare HTML defined "result" container for new output
   const resultContainer = document.getElementById("result");
