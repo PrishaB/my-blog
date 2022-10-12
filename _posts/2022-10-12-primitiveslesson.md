@@ -2,8 +2,8 @@
 title: Primitives Lesson
 layout: default
 description: An introductory to Primitives following College Board's requirements.  
-permalink: /primitives
-image: /images/jokes.png
+permalink: /data/primitives
+image: 
 categories: [1.C]
 tags: [javascript]
 ---
@@ -45,3 +45,11 @@ tags: [javascript]
 
 <img width="964" alt="Screen Shot 2022-10-12 at 9 00 10 AM" src="https://user-images.githubusercontent.com/111522883/195392463-9ef11b5f-dbc9-43b4-9937-c72694eef01d.png">
 <img width="956" alt="Screen Shot 2022-10-12 at 9 00 15 AM" src="https://user-images.githubusercontent.com/111522883/195392469-4c16b1db-6663-4b22-9e6a-91ee86f9adab.png">
+
+<script src="https://utteranc.es/client.js"
+        repo="https://github.com/PrishaB/my-blog.git"
+        issue-term="pathname"
+        theme="icy-dark"
+        crossorigin="anonymous"
+        async>
+</script>
