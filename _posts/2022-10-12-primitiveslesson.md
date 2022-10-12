@@ -49,7 +49,7 @@ tags: [javascript]
 <script src="https://utteranc.es/client.js"
         repo="https://github.com/PrishaB/my-blog.git"
         issue-term="pathname"
-        theme="icy-dark"
+        theme="github-dark"
         crossorigin="anonymous"
         async>
 </script>
