@@ -249,16 +249,10 @@
   
 
   
-  
-
-  
 
   
   
 
-  
-
-  
   
 
   
@@ -270,7 +264,15 @@
   
 
   
-      ,"page12": {
+  
+
+  
+
+  
+  
+
+  
+      ,"page13": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://prishab.github.io/my-blog/robots.txt",
