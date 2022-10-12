@@ -2,7 +2,7 @@
 title: Primitives Lesson
 layout: default
 description: An introductory to Primitives following College Board's requirements.  
-permalink: /data/jokes
+permalink: /primitives
 image: /images/jokes.png
 categories: [1.C]
 tags: [javascript]
