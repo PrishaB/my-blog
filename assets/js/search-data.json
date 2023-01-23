@@ -4,9 +4,9 @@
         "post0": {
             "title": "View and Frontend",
             "content": "General Notes . Anything in includes will be found directly...don&#39;t need file extension when referencing a document | Design is more important, don&#39;t worry about backend for the week...the better the design, the happier Mortensen will be | _site directory --&gt; assemble things to be ready for the web That&#39;s why there is an index.md and an index.html...html is more ready for the web than md | . | Every page you render is an html file...anything else is just a coder helper to build a bigger html file | Make a bunch of fragments to create a website...html is static but has stuff like uh action buttons to make it seem alive | He&#39;s talking about the database thing from last year now :sob: Make a CRUD table based on the project --&gt; doesn&#39;t have to be a table, can be a for | We have to use HTML5 --&gt; has to do with the types...makes it more convenient for us --&gt; prevents input from being incorrect through filtering input (good idea is to look at different inputs for HTML5) | . | Don&#39;t need to wait for a functioning database to do other parts of the code | .",
-            "url": "https://prishab.github.io/my-blog/jupyter/2023/01/09/viewAndFrontend.html",
-            "relUrl": "/jupyter/2023/01/09/viewAndFrontend.html",
-            "date": " • Jan 9, 2023"
+            "url": "https://prishab.github.io/my-blog/jupyter/2023/01/22/viewAndFrontend.html",
+            "relUrl": "/jupyter/2023/01/22/viewAndFrontend.html",
+            "date": " • Jan 22, 2023"
         }
         
     
@@ -15,9 +15,9 @@
         ,"post1": {
             "title": "Title",
             "content": "",
-            "url": "https://prishab.github.io/my-blog/2023/01/09/aboutme.html",
-            "relUrl": "/2023/01/09/aboutme.html",
-            "date": " • Jan 9, 2023"
+            "url": "https://prishab.github.io/my-blog/2023/01/22/aboutme.html",
+            "relUrl": "/2023/01/22/aboutme.html",
+            "date": " • Jan 22, 2023"
         }
         
     
@@ -355,20 +355,9 @@
 
   
   
-      ,"page0": {
-          "title": "Calculator Starters",
-          "content": "| Menu | Calculator | Snake Game | . 0 1 2 3 + 4 5 6 - 7 8 9 * A/C 0 . =",
-          "url": "https://prishab.github.io/my-blog/frontend12/calculator",
-          "relUrl": "/frontend12/calculator",
-          "date": ""
-      }
-      
-  
 
   
-
-  
-      ,"page2": {
+      ,"page1": {
           "title": "About",
           "content": "This site is built with fastpages . Key Links . GitHub Repos: github.com/nighthawkcoders, Spring Portfolio Template | AWS Deployments: csa.nighthawkcodingsociety.com | Slack: Join Link | 2021-2022 Archives: Fall, Early Winter, Late Winter, Spring | . Students . Name ID Age .",
           "url": "https://prishab.github.io/my-blog/about/",
@@ -381,26 +370,11 @@
   
 
   
-      ,"page4": {
-          "title": "Mental Health News Articles",
-          "content": "Copy and Paste the URLs into a new tab to view the articles. . Quote Author Category .",
-          "url": "https://prishab.github.io/my-blog/api/",
-          "relUrl": "/api/",
-          "date": ""
-      }
-      
   
 
   
 
   
-  
-
-  
-
-  
-  
-
   
 
   
@@ -420,7 +394,7 @@
   
 
   
-      ,"page16": {
+      ,"page12": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://prishab.github.io/my-blog/robots.txt",
