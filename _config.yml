@@ -111,8 +111,11 @@ titles_from_headings:
   strip_title: true
   collections: true
 
-highlighter: rouge
+# highlighter: rouge
+# markdown: kramdown
+highlighter: true
 markdown: kramdown
+permalink: pretty
 kramdown:
   math_engine: katex
   input: GFM
