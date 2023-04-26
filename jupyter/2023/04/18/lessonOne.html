@@ -52,7 +52,8 @@
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h2"><a href="#Merge-Sort-Hacks">Merge Sort Hacks </a></li>
+<li class="toc-entry toc-h2"><a href="#Quick-Disclaimer">Quick Disclaimer </a></li>
+<li class="toc-entry toc-h2"><a href="#Merge-Sort-Hack-#-1">Merge Sort Hack # 1 </a></li>
 <li class="toc-entry toc-h2"><a href="#Binary-Search-Hack-#-1">Binary Search Hack # 1 </a></li>
 <li class="toc-entry toc-h2"><a href="#Binary-Search-Hack-#2-EC">Binary Search Hack #2 EC </a></li>
 </ul><!--
@@ -67,9 +68,26 @@
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Merge-Sort-Hacks">
-<a class="anchor" href="#Merge-Sort-Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Merge Sort Hacks<a class="anchor-link" href="#Merge-Sort-Hacks"> </a>
+<h2 id="Quick-Disclaimer">
+<a class="anchor" href="#Quick-Disclaimer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quick Disclaimer<a class="anchor-link" href="#Quick-Disclaimer"> </a>
 </h2>
+<ul>
+<li>I apologize for the wack formatting, I don't know what happened but my blog acted up tonight and I'm just going to leave all the hacks in this one blog if that's okay. Sorry again for the inconvenience. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Merge-Sort-Hack-#-1">
+<a class="anchor" href="#Merge-Sort-Hack-#-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Merge Sort Hack # 1<a class="anchor-link" href="#Merge-Sort-Hack-#-1"> </a>
+</h2>
+<ul>
+<li>Use the integer mergesort that we created and adapt it to sort an array of Java String objects. We recommend using the compareTo() method of the String class for this.</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -80,60 +98,78 @@
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kt">void</span> <span class="nf">merge</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="o">[]</span><span class="p">,</span> <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="c1">// Find the sizes of two subarrays to be merged</span>
-        <span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="n">l</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">n2</span> <span class="o">=</span> <span class="n">r</span> <span class="o">-</span> <span class="n">m</span><span class="p">;</span>
-
-        <span class="cm">/* Create temp arrays */</span>
-        <span class="kt">int</span><span class="o">[]</span> <span class="n">L</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n1</span><span class="o">]</span><span class="p">;</span>
-        <span class="kt">int</span><span class="o">[]</span> <span class="n">R</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n2</span><span class="o">]</span><span class="p">;</span>
-
-        <span class="cm">/* Copy data to temp arrays */</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n1</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-            <span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">l</span> <span class="o">+</span> <span class="n">i</span><span class="o">]</span><span class="p">;</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
-            <span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">m</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">j</span><span class="o">]</span><span class="p">;</span>
-
-        <span class="cm">/* Merge the temp arrays */</span>
-
-        <span class="c1">// Initial indexes of first and second subarrays</span>
-        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
-        <span class="c1">// Initial index of merged subarray array</span>
-        <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">l</span><span class="p">;</span>
-        <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n1</span> <span class="o">&amp;&amp;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&lt;=</span> <span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
-                <span class="c1">// MISSING CODE #1</span>
-                <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Merge</span><span class="p">{</span>
+   
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">mergeSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// base case: array has 1 or 0 elements</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="p">.</span><span class="na">length</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+        
+        <span class="c1">// divide the array into two halves</span>
+        <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">left</span> <span class="o">=</span> <span class="n">Arrays</span><span class="p">.</span><span class="na">copyOfRange</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">mid</span><span class="p">);</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">right</span> <span class="o">=</span> <span class="n">Arrays</span><span class="p">.</span><span class="na">copyOfRange</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">mid</span><span class="p">,</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">);</span>
+        
+        <span class="c1">// recursively sort each half</span>
+        <span class="n">mergeSort</span><span class="p">(</span><span class="n">left</span><span class="p">);</span>
+        <span class="n">mergeSort</span><span class="p">(</span><span class="n">right</span><span class="p">);</span>
+        
+        <span class="c1">// merge the two sorted halves</span>
+        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">left</span><span class="p">.</span><span class="na">length</span> <span class="o">&amp;&amp;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">right</span><span class="p">.</span><span class="na">length</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">left</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">left</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
                 <span class="n">i</span><span class="o">++</span><span class="p">;</span>
-            <span class="p">}</span>
-            <span class="k">else</span> <span class="p">{</span>
-                <span class="c1">// MISSING CODE #2</span>
-                <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">right</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
                 <span class="n">j</span><span class="o">++</span><span class="p">;</span>
             <span class="p">}</span>
             <span class="n">k</span><span class="o">++</span><span class="p">;</span>
         <span class="p">}</span>
-
-        <span class="cm">/* Copy remaining elements of L[] if any */</span>
-        <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n1</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">L</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">left</span><span class="p">.</span><span class="na">length</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">left</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
             <span class="n">i</span><span class="o">++</span><span class="p">;</span>
             <span class="n">k</span><span class="o">++</span><span class="p">;</span>
         <span class="p">}</span>
-
-        <span class="cm">/* Copy remaining elements of R[] if any */</span>
-        <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">R</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">right</span><span class="p">.</span><span class="na">length</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">right</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
             <span class="n">j</span><span class="o">++</span><span class="p">;</span>
             <span class="n">k</span><span class="o">++</span><span class="p">;</span>
         <span class="p">}</span>
     <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">array</span> <span class="o">=</span> <span class="p">{</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">};</span>
+        
+        <span class="c1">// sort the array using merge sort</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Unsorted array: "</span> <span class="o">+</span> <span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">array</span><span class="p">));</span>
+        <span class="n">mergeSort</span><span class="p">(</span><span class="n">array</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Sorted array: "</span> <span class="o">+</span> <span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">array</span><span class="p">));</span> 
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">Merge</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Unsorted array: [7, 8, 2, 4, 5, 3]
+Sorted array: [2, 3, 4, 5, 7, 8]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
