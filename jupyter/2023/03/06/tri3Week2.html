@@ -7,7 +7,7 @@
        • <span class="read-time" title="Estimated read time">
     
     
-      20 min read
+      18 min read
     
 </span></p>
 
@@ -353,83 +353,60 @@ Array after sorting:
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">// This method is the entry point to the Merge Sort algorithm.</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">mergeSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kt">int</span><span class="o">[]</span> <span class="n">temp</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">x</span><span class="p">.</span><span class="na">length</span><span class="o">]</span><span class="p">;</span>
-    <span class="n">mergeSortHelper</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">temp</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="c1">// This method recursively divides the input array into smaller sub-arrays and then merges them in a sorted order.</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">mergeSortHelper</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">lowIndex</span><span class="p">,</span> <span class="kt">int</span> <span class="n">highIndex</span><span class="p">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">temp</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">lowIndex</span> <span class="o">&lt;</span> <span class="n">highIndex</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">lowIndex</span> <span class="o">+</span> <span class="n">highIndex</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
-        <span class="n">mergeSortHelper</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">lowIndex</span><span class="p">,</span> <span class="n">mid</span><span class="p">,</span> <span class="n">temp</span><span class="p">);</span>
-        <span class="n">mergeSortHelper</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">highIndex</span><span class="p">,</span> <span class="n">temp</span><span class="p">);</span>
-        <span class="n">merge</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">lowIndex</span><span class="p">,</span> <span class="n">mid</span><span class="p">,</span> <span class="n">highIndex</span><span class="p">,</span> <span class="n">temp</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-<span class="c1">// This method merges two sorted sub-arrays of the input array.</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">merge</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">lowIndex</span><span class="p">,</span> <span class="kt">int</span> <span class="n">mid</span><span class="p">,</span> <span class="kt">int</span> <span class="n">highIndex</span><span class="p">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">temp</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">l</span> <span class="o">=</span> <span class="n">lowIndex</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">lowIndex</span><span class="p">;</span>
-    <span class="c1">// Merge the two sub-arrays by selecting the smaller element at each step.</span>
-    <span class="k">while</span> <span class="p">(</span><span class="n">l</span> <span class="o">&lt;=</span> <span class="n">mid</span> <span class="o">&amp;&amp;</span> <span class="n">m</span> <span class="o">&lt;=</span> <span class="n">highIndex</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="o">[</span><span class="n">l</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">x</span><span class="o">[</span><span class="n">m</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">temp</span><span class="o">[</span><span class="n">n</span><span class="o">]</span> <span class="o">=</span> <span class="n">x</span><span class="o">[</span><span class="n">l</span><span class="o">]</span><span class="p">;</span>
-            <span class="n">l</span><span class="o">++</span><span class="p">;</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="n">temp</span><span class="o">[</span><span class="n">n</span><span class="o">]</span> <span class="o">=</span> <span class="n">x</span><span class="o">[</span><span class="n">m</span><span class="o">]</span><span class="p">;</span>
-            <span class="n">m</span><span class="o">++</span><span class="p">;</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Merge</span><span class="p">{</span>
+   
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">mergeSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// base case: array has 1 or 0 elements</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="p">.</span><span class="na">length</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span><span class="p">;</span>
         <span class="p">}</span>
-        <span class="n">n</span><span class="o">++</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="c1">// Copy the remaining elements of the left sub-array, if any.</span>
-    <span class="k">while</span> <span class="p">(</span><span class="n">l</span> <span class="o">&lt;=</span> <span class="n">mid</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">temp</span><span class="o">[</span><span class="n">n</span><span class="o">]</span> <span class="o">=</span> <span class="n">x</span><span class="o">[</span><span class="n">l</span><span class="o">]</span><span class="p">;</span>
-        <span class="n">l</span><span class="o">++</span><span class="p">;</span>
-        <span class="n">n</span><span class="o">++</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="c1">// Copy the remaining elements of the right sub-array, if any.</span>
-    <span class="k">while</span> <span class="p">(</span><span class="n">m</span> <span class="o">&lt;=</span> <span class="n">highIndex</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">temp</span><span class="o">[</span><span class="n">n</span><span class="o">]</span> <span class="o">=</span> <span class="n">x</span><span class="o">[</span><span class="n">m</span><span class="o">]</span><span class="p">;</span>
-        <span class="n">m</span><span class="o">++</span><span class="p">;</span>
-        <span class="n">n</span><span class="o">++</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="c1">// Copy the merged elements from the temporary array back to the original array.</span>
-    <span class="k">for</span> <span class="p">(</span><span class="n">n</span> <span class="o">=</span> <span class="n">lowIndex</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="n">highIndex</span><span class="p">;</span> <span class="n">n</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">x</span><span class="o">[</span><span class="n">n</span><span class="o">]</span> <span class="o">=</span> <span class="n">temp</span><span class="o">[</span><span class="n">n</span><span class="o">]</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-<span class="c1">// This method generates an array of random integers, sorts it using Merge Sort, and calculates the sum of its elements.</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">final</span> <span class="kt">int</span> <span class="n">TIMES</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
-    <span class="kd">final</span> <span class="kt">int</span> <span class="n">SIZE</span> <span class="o">=</span> <span class="mi">5000</span><span class="p">;</span>
-    <span class="kt">double</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="kt">double</span> <span class="n">time</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="c1">// Repeat the process multiple times and calculate the average sum and total time taken.</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">TIMES</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">int</span><span class="o">[]</span> <span class="n">data</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">SIZE</span><span class="o">]</span><span class="p">;</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">data</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">data</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100000</span><span class="p">);</span>
+        
+        <span class="c1">// divide the array into two halves</span>
+        <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">left</span> <span class="o">=</span> <span class="n">Arrays</span><span class="p">.</span><span class="na">copyOfRange</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">mid</span><span class="p">);</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">right</span> <span class="o">=</span> <span class="n">Arrays</span><span class="p">.</span><span class="na">copyOfRange</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">mid</span><span class="p">,</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">);</span>
+        
+        <span class="c1">// recursively sort each half</span>
+        <span class="n">mergeSort</span><span class="p">(</span><span class="n">left</span><span class="p">);</span>
+        <span class="n">mergeSort</span><span class="p">(</span><span class="n">right</span><span class="p">);</span>
+        
+        <span class="c1">// merge the two sorted halves</span>
+        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">left</span><span class="p">.</span><span class="na">length</span> <span class="o">&amp;&amp;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">right</span><span class="p">.</span><span class="na">length</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">left</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">left</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+                <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">right</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+                <span class="n">j</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">k</span><span class="o">++</span><span class="p">;</span>
         <span class="p">}</span>
-        <span class="kt">double</span> <span class="n">startTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
-        <span class="n">mergeSort</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
-        <span class="kt">double</span> <span class="n">endTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
-        <span class="n">sum</span> <span class="o">+=</span> <span class="n">getSum</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
-        <span class="n">time</span> <span class="o">+=</span> <span class="n">endTime</span> <span class="o">-</span> <span class="n">startTime</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">left</span><span class="p">.</span><span class="na">length</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">left</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+            <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+            <span class="n">k</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">right</span><span class="p">.</span><span class="na">length</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">right</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+            <span class="n">j</span><span class="o">++</span><span class="p">;</span>
+            <span class="n">k</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
     <span class="p">}</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Average: "</span> <span class="o">+</span> <span class="n">sum</span> <span class="o">/</span> <span class="p">(</span><span class="n">TIMES</span> <span class="o">*</span> <span class="n">SIZE</span><span class="p">));</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Total Seconds: "</span> <span class="o">+</span> <span class="n">time</span> <span class="o">/</span> <span class="mf">1000000000.0</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="c1">// This method calculates the sum of the elements in an array.</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">getSum</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kt">double</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">data</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">sum</span> <span class="o">+=</span> <span class="n">data</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">array</span> <span class="o">=</span> <span class="p">{</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">};</span>
+        
+        <span class="c1">// sort the array using merge sort</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Unsorted array: "</span> <span class="o">+</span> <span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">array</span><span class="p">));</span>
+        <span class="n">mergeSort</span><span class="p">(</span><span class="n">array</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Sorted array: "</span> <span class="o">+</span> <span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">array</span><span class="p">));</span> 
     <span class="p">}</span>
-    <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="n">mergeSort</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+
+<span class="n">Merge</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -441,11 +418,9 @@ Array after sorting:
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">mergeSort</span><span class="ansi-black-intense-fg ansi-bold">.main(null);</span>
-<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
-<span class="ansi-red-intense-fg ansi-bold">  symbol:   variable mergeSort</span>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Unsorted array: [7, 8, 2, 4, 5, 3]
+Sorted array: [2, 3, 4, 5, 7, 8]
 </pre>
 </div>
 </div>
